@@ -1,0 +1,11 @@
+ListingId,ListingKey,MlgCanUse,MlgCanView,ModificationTimestamp,OpenHouseDate,OpenHouseEndTime,OpenHouseKey,OpenHouseRemarks,OpenHouseStartTime,OpenHouseStatus,OpenHouseType,OriginatingSystemName,Refreshments
+MFRO6083526,MFR681559803,"[""VOW"", ""BO""]",true,2023-01-18T17:55:07.511Z,,,MFR681625911,,,,,mfrmls,
+MFRO6083526,MFR681559803,"[""VOW"", ""BO""]",true,2023-01-18T17:55:07.519Z,,,MFR681625912,,,,,mfrmls,
+MFRO6138285,MFR701148427,"[""VOW"", ""BO""]",true,2023-09-08T17:55:07.531Z,,,MFR701482574,,,,,mfrmls,
+MFRO6180693,MFR715310934,"[""VOW"", ""BO""]",true,2024-02-22T22:10:11.484Z,,,MFR715518987,,,,,mfrmls,
+MFRA4610453,MFR726359308,"[""IDX"", ""VOW"", ""BO""]",true,2024-07-26T11:55:11.633Z,2026-06-06,2026-06-06T19:00:00.000Z,MFR726559889,,2026-06-06T04:00:00.000Z,Active,Public,mfrmls,
+MFRT3546931,MFR733435177,"[""IDX"", ""VOW"", ""BO""]",true,2024-08-10T15:25:07.314Z,2024-09-22,2024-09-22T18:30:00.000Z,MFR733825032,"When you drive up to Front Gate key in ""6547"" - I will open the gate for you to enter complex, slightly turn to right and follow building to ""11"" there will be a ""OPEN HOUSE"" sign at front entrance - condo is first floor on left hand side.",2024-09-22T16:30:00.000Z,Active,Public,mfrmls,
+MFRW7867234,MFR733387759,"[""IDX"", ""VOW"", ""BO""]",true,2024-08-13T17:55:07.301Z,2024-09-29,2024-09-29T17:00:00.000Z,MFR734009535,SUNDAY OPEN HOUSE!!  LARGE FIVE BEDROOM HOME!  OPEN HOUSE 12-1PM,2024-09-29T16:00:00.000Z,Active,Public,mfrmls,
+MFRU8249185,MFR730921486,"[""IDX"", ""VOW"", ""BO""]",true,2024-08-19T17:55:07.493Z,2024-09-21,2024-09-21T19:00:00.000Z,MFR731054818,,2024-09-21T14:00:00.000Z,Active,Public,mfrmls,
+MFRT3542176,MFR731791837,"[""IDX"", ""VOW"", ""BO""]",true,2024-08-19T20:40:07.979Z,2024-09-29,2024-09-29T19:00:00.000Z,MFR734536785,,2024-09-29T17:00:00.000Z,Active,Public,mfrmls,
+MFRO6211567,MFR728242950,"[""IDX"", ""VOW"", ""BO""]",true,2024-08-19T21:40:07.292Z,2024-09-28,2024-09-28T20:30:00.000Z,MFR734542876,,2024-09-28T17:30:00.000Z,Active,Public,mfrmls,
