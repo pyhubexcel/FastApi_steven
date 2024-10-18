@@ -156,19 +156,22 @@ class PaginatedResponse(BaseModel):
     page: int
     size: int
 
+
+
 def parse_media(media_data: str) -> List[Dict[str, Any]]:
     try:
         media_list = json.loads(media_data)
-
         return [
             {
-                "image_url": item.get("MediaURL"),  # Map MediaURL to image_url
+                "image_url": item.get("MediaURL"),  
                 **{k: v for k, v in item.items() if k in MediaResponse.__annotations__ and k != "MediaURL"}
             }
             for item in media_list
         ]
     except json.JSONDecodeError:
         return []
+
+
 
 @app.post("/search", response_model=PaginatedResponse)
 def search_properties(
@@ -216,6 +219,7 @@ def search_properties(
         else:
             prop_dict['images'] = []
 
+
         # Update field mappings
         prop_dict['full_bathrooms'] = prop_dict.pop('BathroomsFull', None)
         prop_dict['half_bathrooms'] = prop_dict.pop('BathroomsHalf', None)
@@ -250,84 +254,210 @@ def search_properties(
         size=BATCH_SIZE
     )
 
-if __name__ == "__main__":
-    uvicorn.run(app, host="192.168.36.100", port=9999)
 
 
 
 
-
-    
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
 from database import get_db
 from typing import List, Dict
 from pydantic import BaseModel
 from sqlalchemy import text
+from sqlalchemy import cast, Float
 
-# Define a model for a corner coordinate
-class CornerCoordinate(BaseModel):
-    lat: float
-    lng: float
 
-# Update the MapFocus model to accept a list of corner coordinates
+
+class Coordinate(BaseModel):
+    latitude: float
+    longitude: float
+
 class MapFocus(BaseModel):
-    corners: List[CornerCoordinate]
+    northeast: Coordinate
+    northwest: Coordinate
+    southeast: Coordinate
+    southwest: Coordinate
+
+class PropertyDetails(BaseModel):
+    Latitude: float
+    Longitude: float
+    ListingId: str 
+    property_id: str 
+
+class Cluster(BaseModel):
+    count: int
 
 class ClusteringResponse(BaseModel):
-    clusters: List[Dict[str, float]]  # Adjusted to return clusters or individual properties
-    total_count: int
+    clusters: List[Dict]  
 
-@app.post("/cluster_properties", response_model=ClusteringResponse)
+
+@app.post("/cluster_properties_data", response_model=ClusteringResponse)
 def cluster_properties(
     map_focus: MapFocus,
     db: Session = Depends(get_db),
 ):
-    # Extract coordinates from the corners
-    north_east_latitude = max(corner.lat for corner in map_focus.corners)
-    north_east_longitude = max(corner.lng for corner in map_focus.corners)
-    south_west_latitude = min(corner.lat for corner in map_focus.corners)
-    south_west_longitude = min(corner.lng for corner in map_focus.corners)
+    # Extract map focus coordinates
+    north_east_latitude = map_focus.northeast.latitude
+    north_east_longitude = map_focus.northeast.longitude
+    south_west_latitude = map_focus.southwest.latitude
+    south_west_longitude = map_focus.southwest.longitude
 
-    # Query to get properties within the bounding box
-    query = text("""
-        SELECT * FROM merged_property
-        WHERE latitude BETWEEN :south_west_latitude AND :north_east_latitude
-        AND longitude BETWEEN :south_west_longitude AND :north_east_longitude
+    # Modify query to cast Latitude and Longitude as Float
+    properties = db.query(
+        cast(Property.Latitude, Float),
+        cast(Property.Longitude, Float),
+        Property.ListingId,
+        Property.ListPrice
+    ).filter(
+        cast(Property.Latitude, Float).between(south_west_latitude, north_east_latitude),
+        cast(Property.Longitude, Float).between(south_west_longitude, north_east_longitude),
+        Property.StandardStatus.in_(["Active", "Pending", "Coming Soon"])  
+    ).all()
+
+    if not properties:
+        raise HTTPException(status_code=404, detail="No properties found in this area")
+
+    # Process and return response as needed
+    cluster_map = {}
+    response_clusters = []
+
+
+    for prop in properties:
+        lat = round(float(prop[0]), 1)
+        lng = round(float(prop[1]), 1)
+        key = (lat, lng)
+
+
+    for key, value in cluster_map.items():
+        response_clusters.append({
+            "location": value["location"],
+            "count": value["count"]
+        })
+
+    for prop in properties:
+        response_clusters.append({
+            "latitude": float(prop[0]),
+            "longitude": float(prop[1]),
+            "listingId": str(prop[2]),
+            "price": str(prop[3])
+        })
+
+    return ClusteringResponse(clusters=response_clusters, total_count=len(properties))
+
+
+#####midpointAPI########
+
+class Coordinate(BaseModel):
+    latitude: float
+    longitude: float
+
+class MapFocus(BaseModel):
+    northeast: Coordinate
+    northwest: Coordinate
+    southeast: Coordinate
+    southwest: Coordinate
+
+class MidpointCluster(BaseModel):
+    latitude: float  
+    longitude: float  
+    count: int
+
+class MidpointsResponse(BaseModel):
+    midpoints: List[MidpointCluster]
+
+@app.post("/cluster_property_mid_point", response_model=MidpointsResponse)
+def cluster_properties_mid(
+    map_focus: MapFocus,
+    db: Session = Depends(get_db),
+):
+    north_east_latitude = map_focus.northeast.latitude
+    north_east_longitude = map_focus.northeast.longitude
+    south_west_latitude = map_focus.southwest.latitude
+    south_west_longitude = map_focus.southwest.longitude
+
+    # Define the statuses you want to filter
+    desired_statuses = ["Active", "Pending", "Coming Soon"]
+
+    query = text(""" 
+        SELECT "Latitude", "Longitude" FROM merged_property 
+        WHERE CAST("Latitude" AS FLOAT) BETWEEN :south_west_latitude AND :north_east_latitude 
+        AND CAST("Longitude" AS FLOAT) BETWEEN :south_west_longitude AND :north_east_longitude
+        AND "StandardStatus" IN :desired_statuses
     """)
     params = {
         "south_west_latitude": south_west_latitude,
         "north_east_latitude": north_east_latitude,
         "south_west_longitude": south_west_longitude,
         "north_east_longitude": north_east_longitude,
+        "desired_statuses": tuple(desired_statuses),
     }
-
     result = db.execute(query, params)
     properties = result.fetchall()
 
     if not properties:
-        raise HTTPException(status_code=404, detail="No properties found in this area")
+        raise HTTPException(status_code=404, detail="No properties found in this area with the specified statuses")
 
-    # Implement clustering logic
-    clusters = []  # This should contain your clustering logic
-    cluster_map = {}
-    
+    # Clustering logic: grid-based approach
+    cluster_size = 0.01  # Size of each cluster grid cell (degrees of latitude/longitude)
+    clusters = {}
+
     for prop in properties:
-        key = (round(prop.latitude, 1), round(prop.longitude, 1))  # Cluster by rounded lat/lng
-        if key not in cluster_map:
-            cluster_map[key] = {
-                "latitude": prop.latitude,
-                "longitude": prop.longitude,
-                "count": 0
+        lat = float(prop.Latitude)
+        lng = float(prop.Longitude)
+        
+        # Compute the grid cell for this property
+        grid_lat = round(lat / cluster_size)
+        grid_lng = round(lng / cluster_size)
+        grid_key = (grid_lat, grid_lng)
+        
+        # Add the property to the corresponding cluster
+        if grid_key not in clusters:
+            clusters[grid_key] = {
+                "sum_lat": 0,
+                "sum_lng": 0,
+                "count": 0,
             }
-        cluster_map[key]["count"] += 1
+        
+        clusters[grid_key]["sum_lat"] += lat
+        clusters[grid_key]["sum_lng"] += lng
+        clusters[grid_key]["count"] += 1
 
-    clusters = [{"location": k, "count": v["count"]} for k, v in cluster_map.items()]
+    # Prepare the response
+    midpoints = []
+    total_clusters = len(clusters)
 
-    return ClusteringResponse(clusters=clusters, total_count=len(properties))
+    if total_clusters > 60:
+        # Reduce clusters by merging those with few properties into larger clusters
+        cluster_threshold = 60  # Maximum number of clusters we want to return
+        sorted_clusters = sorted(clusters.values(), key=lambda x: -x["count"])
+        
+        for cluster_data in sorted_clusters[:cluster_threshold]:
+            avg_latitude = cluster_data["sum_lat"] / cluster_data["count"]
+            avg_longitude = cluster_data["sum_lng"] / cluster_data["count"]
+            midpoints.append(MidpointCluster(
+                latitude=avg_latitude,
+                longitude=avg_longitude,
+                count=cluster_data["count"]
+            ))
 
+        # Merge remaining clusters into the top 60 clusters by increasing their count
+        remaining_clusters = sorted_clusters[cluster_threshold:]
+        for cluster_data in remaining_clusters:
+            closest_cluster = min(midpoints, key=lambda c: (c.latitude - (cluster_data["sum_lat"] / cluster_data["count"]))**2 + (c.longitude - (cluster_data["sum_lng"] / cluster_data["count"]))**2)
+            closest_cluster.count += cluster_data["count"]
 
+    else:
+        # If clusters are 60 or less, just add them all
+        for cluster_data in clusters.values():
+            avg_latitude = cluster_data["sum_lat"] / cluster_data["count"]
+            avg_longitude = cluster_data["sum_lng"] / cluster_data["count"]
+            midpoints.append(MidpointCluster(
+                latitude=avg_latitude,
+                longitude=avg_longitude,
+                count=cluster_data["count"]
+            ))
 
+    return MidpointsResponse(midpoints=midpoints)
 
 if __name__ == "__main__":
     uvicorn.run(app, host="192.168.36.100", port=9999)

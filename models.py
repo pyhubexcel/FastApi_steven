@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Float, Boolean, DateTime, ForeignKey
+from sqlalchemy import Column, Integer, String, Float, Boolean, DateTime, ForeignKey, Index
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 
@@ -48,6 +48,14 @@ class Property(Base):
     Utilities = Column(String)
     VirtualTourURLUnbranded = Column(String)
     OriginatingSystemName = Column(String)
+    ListingId = Column(String)
+    ListPrice = Column(String)
+
+    __table_args__ = (
+        Index('idx_listing_id', 'ListingId'), 
+        Index('idx_ListPrice', 'ListPrice'),  
+        Index('idx_latitude_longitude', 'Latitude', 'Longitude'),     
+    )
 
     open_houses = relationship("OpenHouse", back_populates="property")
 
@@ -64,3 +72,5 @@ class OpenHouse(Base):
     OpenHouseType = Column(String)
 
     property = relationship("Property", back_populates="open_houses")
+
+

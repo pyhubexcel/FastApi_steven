@@ -2350,3 +2350,17 @@ INFO:     192.168.36.1:53030 - "POST /search HTTP/1.1" 200 OK
 INFO:     192.168.36.1:45724 - "POST /search HTTP/1.1" 200 OK
 INFO:     192.168.36.1:49718 - "POST /search HTTP/1.1" 200 OK
 INFO:     192.168.36.1:52384 - "POST /search HTTP/1.1" 200 OK
+INFO:     Started server process [1387012]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 98] error while attempting to bind on address ('192.168.36.100', 9999): address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Started server process [1388295]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://192.168.36.100:9999 (Press CTRL+C to quit)
+INFO:     192.168.35.100:41200 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     192.168.35.100:37934 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+ERROR:    Error loading ASGI app. Import string "mai" must be in format "<module>:<attribute>".
