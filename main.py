@@ -265,6 +265,7 @@ from typing import List, Dict
 from pydantic import BaseModel
 from sqlalchemy import text
 from sqlalchemy import cast, Float
+from sqlalchemy import select
 
 
 
@@ -302,7 +303,7 @@ def cluster_properties(
     south_west_latitude = map_focus.southwest.latitude
     south_west_longitude = map_focus.southwest.longitude
 
-    # Modify query to cast Latitude and Longitude as Float
+   # Modify query to cast Latitude and Longitude as Float
     properties = db.query(
         cast(Property.Latitude, Float),
         cast(Property.Longitude, Float),
@@ -313,6 +314,7 @@ def cluster_properties(
         cast(Property.Longitude, Float).between(south_west_longitude, north_east_longitude),
         Property.StandardStatus.in_(["Active", "Pending", "Coming Soon"])  
     ).all()
+   
 
     if not properties:
         raise HTTPException(status_code=404, detail="No properties found in this area")
@@ -343,6 +345,9 @@ def cluster_properties(
         })
 
     return ClusteringResponse(clusters=response_clusters, total_count=len(properties))
+
+
+
 
 
 #####midpointAPI########
