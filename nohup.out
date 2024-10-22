@@ -2603,3 +2603,1057 @@ INFO:     192.168.36.1:50380 - "POST /cluster_properties_data HTTP/1.1" 404 Not 
 INFO:     192.168.36.1:55564 - "POST /search HTTP/1.1" 200 OK
 INFO:     192.168.36.1:55574 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
 INFO:     192.168.36.1:49738 - "POST /search HTTP/1.1" 200 OK
+INFO:     Will watch for changes in these directories: ['/home/local/property_listings_api']
+INFO:     Uvicorn running on http://192.168.36.100:8999 (Press CTRL+C to quit)
+INFO:     Started reloader process [1649369] using StatReload
+ERROR:    Error loading ASGI app. Import string "mai" must be in format "<module>:<attribute>".
+INFO:     Stopping reloader process [1649369]
+INFO:     Started server process [1846260]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://192.168.36.100:9999 (Press CTRL+C to quit)
+INFO:     192.168.36.1:52816 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:50970 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:50978 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:44060 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:34760 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:38704 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:38708 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:40366 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:56100 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:52560 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:52564 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:44222 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:45040 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:42584 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:42600 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:52108 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:50138 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:38106 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:41512 - "POST /search HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1846260]
+INFO:     Started server process [1848871]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://192.168.36.100:9999 (Press CTRL+C to quit)
+INFO:     192.168.36.1:45334 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:47036 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:60306 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:60320 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:60322 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:53672 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:58140 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:39846 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:51784 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:51794 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:37270 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:37278 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:49562 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:49564 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:33476 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:33488 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:55982 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:35408 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:44438 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:44450 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:36876 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:40220 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:42040 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:42904 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:55714 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:44398 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:48412 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:55170 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:45300 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:45316 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:55058 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:46204 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:42440 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:47508 - "POST /search HTTP/1.1" 200 OK
+INFO:     192.168.36.1:59886 - "POST /search HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.36.1:34296 - "POST /search HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.36.1:53626 - "POST /search HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.36.1:35898 - "POST /search HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.36.1:43390 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:50418 - "POST /search?page=2&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:40672 - "POST /search?page=2&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:47928 - "POST /search?page=2&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:47942 - "POST /search?page=2&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:37196 - "POST /search?page=2&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:47504 - "POST /search?page=2&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:47512 - "POST /search?page=2&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:37200 - "POST /search?page=3&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:48958 - "POST /search?page=3&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:48970 - "POST /search?page=3&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:48980 - "POST /search?page=3&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:57030 - "POST /search?page=3&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:57044 - "POST /search?page=3&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:59454 - "POST /search?page=3&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:59458 - "POST /search?page=3&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:59464 - "POST /search?page=3&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:33550 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:51676 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:51686 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:53230 - "POST /search?page=2&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:38254 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:43030 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:60172 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:59372 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:40928 - "POST /search?page=2&size=20 HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:40936 - "POST /search?page=2&size=20 HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:58898 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:58904 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:58906 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:41406 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:41412 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:41424 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:41432 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:32850 - "POST /search?page=2&size=20 HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:32852 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:55768 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:47368 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:43684 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:40758 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:40768 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:43608 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:43624 - "POST /search?page=2&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:37762 - "POST /search?page=2&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:47868 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:44896 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:58970 - "POST /search?page=10&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:58150 - "POST /search?page=10&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:58152 - "POST /search?page=10&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:36792 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:36796 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:42260 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:50764 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1848871]
+Usage: uvicorn [OPTIONS] APP
+Try 'uvicorn --help' for help.
+
+Error: Got unexpected extra argument (main:app)
+Usage: uvicorn [OPTIONS] APP
+Try 'uvicorn --help' for help.
+
+Error: Got unexpected extra argument (main:app)
+Usage: uvicorn [OPTIONS] APP
+Try 'uvicorn --help' for help.
+
+Error: Got unexpected extra argument (main:app)
+INFO:     Started server process [2004336]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://192.168.36.100:9999 (Press CTRL+C to quit)
+INFO:     192.168.36.1:50036 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:53758 - "POST /cluster_property_mid_point HTTP/1.1" 200 OK
+INFO:     192.168.36.1:36612 - "POST /cluster_property_mid_point HTTP/1.1" 200 OK
+INFO:     192.168.36.1:36624 - "POST /cluster_property_mid_point HTTP/1.1" 200 OK
+INFO:     192.168.36.1:36636 - "POST /cluster_property_mid_point HTTP/1.1" 200 OK
+INFO:     192.168.36.1:36640 - "POST /cluster_property_mid_point HTTP/1.1" 200 OK
+INFO:     192.168.36.1:36652 - "POST /cluster_property_mid_point HTTP/1.1" 200 OK
+INFO:     192.168.36.1:59264 - "POST /cluster_property_mid_point HTTP/1.1" 200 OK
+INFO:     192.168.36.1:59272 - "POST /cluster_property_mid_point HTTP/1.1" 200 OK
+INFO:     192.168.36.1:59274 - "POST /cluster_properties_data HTTP/1.1" 200 OK
+INFO:     192.168.36.1:53502 - "POST /cluster_properties_data HTTP/1.1" 200 OK
+INFO:     192.168.36.1:53514 - "POST /cluster_properties_data HTTP/1.1" 200 OK
+INFO:     192.168.36.1:53516 - "POST /cluster_properties_data HTTP/1.1" 200 OK
+INFO:     192.168.36.1:53530 - "POST /cluster_properties_data HTTP/1.1" 200 OK
+INFO:     192.168.36.1:43602 - "POST /cluster_properties_data HTTP/1.1" 200 OK
+INFO:     192.168.36.1:43618 - "POST /cluster_properties_data HTTP/1.1" 200 OK
+INFO:     192.168.36.1:40260 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:40268 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:36756 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:41070 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:40770 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:40782 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:58140 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:58152 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:40442 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:35706 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:55228 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:55230 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:52186 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:52200 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:54814 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:54830 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:44210 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:35644 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:51218 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:54900 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:47324 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:48008 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:48022 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:46726 - "POST /cluster_property_mid_point HTTP/1.1" 200 OK
+INFO:     192.168.36.1:47934 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:44298 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:50550 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:58126 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:39230 - "POST /search?page=1&size=20 HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:49452 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:47362 - "POST /search?page=1&size=20 HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.36.1:47368 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:39552 - "POST /search?page=1&size=20 HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:32870 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:32874 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:41848 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:55180 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:56720 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:56728 - "POST /search?page=1&size=20 HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:53656 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:53668 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:33250 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:46630 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:46644 - "POST /search?page=1&size=20 HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:39064 - "POST /search?page=1&size=20 HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:55112 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:55120 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:42298 - "POST /search?page=1&size=20 HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:55492 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:59688 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:55358 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:59676 - "POST /search?page=1&size=20 HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:50510 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:55748 - "POST /search?page=1&size=20 HTTP/1.1" 404 Not Found
+INFO:     192.168.35.100:63483 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.35.100:63483 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.35.100:63484 - "POST /search?page=1 HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:39126 - "POST /search?page=1&size=20 HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:50152 - "POST /search?page=1&size=20 HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:34644 - "POST /search?page=1&size=20 HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:41230 - "POST /search?page=1&size=20 HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:41920 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:44978 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:35508 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:35524 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:37966 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:37980 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.35.100:56572 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.36.1:47906 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:47918 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:59116 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:59128 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:36096 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:36110 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:47322 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:47336 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:45396 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:45408 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:38872 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:42450 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:42452 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:42458 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:42462 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:60616 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:60632 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:41830 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:51412 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:51418 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:51426 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:51436 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:51448 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:51464 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:41264 - "POST /search?page=2&size=20 HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:42926 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:42952 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:42936 - "POST /search?page=2&size=20 HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:56254 - "POST /search?page=3&size=20 HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:52062 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:59856 - "POST /search?page=2&size=20 HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:48332 - "POST /search?page=2&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:56388 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:35982 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:35986 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:35092 - "POST /search?page=2&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:35108 - "POST /search?page=2&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:53936 - "POST /search?page=2&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:53950 - "POST /search?page=3&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:37232 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:37240 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:37250 - "POST /search?page=3&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:38544 - "POST /search?page=4&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:38552 - "POST /search?page=4&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:37548 - "POST /search?page=5&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:37560 - "POST /search?page=5&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:50438 - "POST /search?page=6&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:54798 - "POST /search?page=7&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:54800 - "POST /search?page=7&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:39550 - "POST /search?page=7&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:39562 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:39568 - "POST /search?page=7&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:39572 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:39586 - "POST /search?page=7&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:39600 - "POST /search?page=7&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:45202 - "POST /search?page=7&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:45206 - "POST /search?page=7&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.35.100:61362 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.35.100:61362 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.35.100:61504 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.35.100:61504 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.36.1:56538 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:46908 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:51638 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:42842 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+INFO:     192.168.36.1:50116 - "POST /search?page=7&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:48354 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:35794 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:33294 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:33304 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:33746 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:33752 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:33754 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:33762 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:53982 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:45720 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:42308 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:40018 - "POST /search?page=2&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:46612 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:46622 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:46630 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:60296 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:60310 - "POST /search?page=2&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:37784 - "POST /search?page=2&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:46772 - "POST /search?page=3&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:51216 - "POST /search?page=2&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:44464 - "POST /search?page=2&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:35652 - "POST /search?page=2&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:44430 - "POST /search?page=2&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:38416 - "POST /cluster_property_mid_point HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.36.1:39746 - "POST /cluster_property_mid_point HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.36.1:39748 - "POST /cluster_property_mid_point HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.36.1:39812 - "POST /cluster_property_mid_point HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.36.1:39820 - "POST /cluster_property_mid_point HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.36.1:39824 - "POST /cluster_property_mid_point HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.36.1:39830 - "POST /cluster_properties_data HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.36.1:40694 - "POST /cluster_properties_data HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.36.1:40708 - "POST /cluster_properties_data HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.36.1:40722 - "POST /cluster_properties_data HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.36.1:40726 - "POST /cluster_properties_data HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.36.1:54752 - "POST /cluster_properties_data HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.36.1:54754 - "POST /cluster_properties_data HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.36.1:54766 - "POST /cluster_properties_data HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.36.1:41318 - "POST /cluster_properties_data HTTP/1.1" 422 Unprocessable Entity
+INFO:     Shutting down
+INFO:     Waiting for connections to close. (CTRL+C to force quit)
+Usage: uvicorn [OPTIONS] APP
+Try 'uvicorn --help' for help.
+
+Error: Got unexpected extra argument ($)
+Usage: uvicorn [OPTIONS] APP
+Try 'uvicorn --help' for help.
+
+Error: Got unexpected extra argument ($)
+INFO:     Started server process [2717723]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://192.168.36.100:9999 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2717723]
+INFO:     Will watch for changes in these directories: ['/home/local/property_listings_api']
+INFO:     Uvicorn running on http://192.168.36.100:9999 (Press CTRL+C to quit)
+INFO:     Started reloader process [2719327] using StatReload
+INFO:     Started server process [2719330]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2719330]
+INFO:     Started server process [2719435]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2719435]
+INFO:     Started server process [2719509]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.36.1:53432 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.35.100:55526 - "POST /search?page=2 HTTP/1.1" 422 Unprocessable Entity
+SELECT * FROM merged_property WHERE 1=1 AND "StandardStatus" = :StandardStatus AND CAST("Latitude" AS FLOAT) BETWEEN :southwest_latitude AND :northeast_latitude AND CAST("Longitude" AS FLOAT) BETWEEN :southwest_longitude AND :northeast_longitude ORDER BY "ListingId" LIMIT :size OFFSET :offset
+INFO:     192.168.35.100:50110 - "POST /search?page=2 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:40574 - "POST /cluster_properties_data HTTP/1.1" 404 Not Found
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2719509]
+INFO:     Started server process [2721626]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2721626]
+INFO:     Started server process [2722261]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.36.1:35570 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:60450 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+SELECT * FROM merged_property WHERE 1=1 AND "StandardStatus" IN :desired_statuses AND CAST("Latitude" AS FLOAT) BETWEEN :southwest_latitude AND :northeast_latitude AND CAST("Longitude" AS FLOAT) BETWEEN :southwest_longitude AND :northeast_longitude ORDER BY "ListingId" LIMIT :size OFFSET :offset
+INFO:     192.168.36.1:42206 - "POST /search?page=2&size=20 HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1815, in _execute_context
+    context = constructor(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 1396, in _init_compiled
+    self.compiled_parameters = [
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 1397, in <listcomp>
+    compiled.construct_params(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 1894, in construct_params
+    raise exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: A value is required for bind parameter 'desired_statuses' (Background on this error at: https://sqlalche.me/e/20/cd3x)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 406, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/fastapi/routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/anyio/to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2405, in run_sync_in_worker_thread
+    return await future
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 914, in run
+    result = context.run(func, *args)
+  File "/home/local/property_listings_api/main.py", line 335, in search_properties
+    result = db.execute(text(query), params)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2362, in execute
+    return self._execute_internal(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2256, in _execute_internal
+    result = conn.execute(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1821, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1815, in _execute_context
+    context = constructor(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 1396, in _init_compiled
+    self.compiled_parameters = [
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 1397, in <listcomp>
+    compiled.construct_params(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 1894, in construct_params
+    raise exc.InvalidRequestError(
+sqlalchemy.exc.StatementError: (sqlalchemy.exc.InvalidRequestError) A value is required for bind parameter 'desired_statuses'
+[SQL: SELECT * FROM merged_property WHERE 1=1 AND "StandardStatus" IN %(desired_statuses)s AND CAST("Latitude" AS FLOAT) BETWEEN %(southwest_latitude)s AND %(northeast_latitude)s AND CAST("Longitude" AS FLOAT) BETWEEN %(southwest_longitude)s AND %(northeast_longitude)s ORDER BY "ListingId" LIMIT %(size)s OFFSET %(offset)s]
+[parameters: [{'northeast_latitude': 28.566830896604944, 'southwest_latitude': 28.520719324434314, 'northeast_longitude': -81.3574105873704, 'southwest_longitude': -81.38629160821438, 'size': 20, 'offset': 20}]]
+(Background on this error at: https://sqlalche.me/e/20/cd3x)
+SELECT * FROM merged_property WHERE 1=1 AND "StandardStatus" IN :desired_statuses AND CAST("Latitude" AS FLOAT) BETWEEN :southwest_latitude AND :northeast_latitude AND CAST("Longitude" AS FLOAT) BETWEEN :southwest_longitude AND :northeast_longitude ORDER BY "ListingId" LIMIT :size OFFSET :offset
+INFO:     192.168.36.1:50766 - "POST /search?page=3&size=20 HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1815, in _execute_context
+    context = constructor(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 1396, in _init_compiled
+    self.compiled_parameters = [
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 1397, in <listcomp>
+    compiled.construct_params(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 1894, in construct_params
+    raise exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: A value is required for bind parameter 'desired_statuses' (Background on this error at: https://sqlalche.me/e/20/cd3x)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 406, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/fastapi/routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/anyio/to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2405, in run_sync_in_worker_thread
+    return await future
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 914, in run
+    result = context.run(func, *args)
+  File "/home/local/property_listings_api/main.py", line 335, in search_properties
+    result = db.execute(text(query), params)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2362, in execute
+    return self._execute_internal(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2256, in _execute_internal
+    result = conn.execute(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1821, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1815, in _execute_context
+    context = constructor(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 1396, in _init_compiled
+    self.compiled_parameters = [
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 1397, in <listcomp>
+    compiled.construct_params(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 1894, in construct_params
+    raise exc.InvalidRequestError(
+sqlalchemy.exc.StatementError: (sqlalchemy.exc.InvalidRequestError) A value is required for bind parameter 'desired_statuses'
+[SQL: SELECT * FROM merged_property WHERE 1=1 AND "StandardStatus" IN %(desired_statuses)s AND CAST("Latitude" AS FLOAT) BETWEEN %(southwest_latitude)s AND %(northeast_latitude)s AND CAST("Longitude" AS FLOAT) BETWEEN %(southwest_longitude)s AND %(northeast_longitude)s ORDER BY "ListingId" LIMIT %(size)s OFFSET %(offset)s]
+[parameters: [{'northeast_latitude': 28.566830896604944, 'southwest_latitude': 28.520719324434314, 'northeast_longitude': -81.3574105873704, 'southwest_longitude': -81.38629160821438, 'size': 20, 'offset': 40}]]
+(Background on this error at: https://sqlalche.me/e/20/cd3x)
+SELECT * FROM merged_property WHERE 1=1 AND "StandardStatus" IN :desired_statuses AND "StandardStatus" = :StandardStatus AND CAST("Latitude" AS FLOAT) BETWEEN :southwest_latitude AND :northeast_latitude AND CAST("Longitude" AS FLOAT) BETWEEN :southwest_longitude AND :northeast_longitude ORDER BY "ListingId" LIMIT :size OFFSET :offset
+INFO:     192.168.36.1:39846 - "POST /search?page=3&size=20 HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1815, in _execute_context
+    context = constructor(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 1396, in _init_compiled
+    self.compiled_parameters = [
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 1397, in <listcomp>
+    compiled.construct_params(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 1894, in construct_params
+    raise exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: A value is required for bind parameter 'desired_statuses' (Background on this error at: https://sqlalche.me/e/20/cd3x)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 406, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/fastapi/routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/starlette/concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/anyio/to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2405, in run_sync_in_worker_thread
+    return await future
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 914, in run
+    result = context.run(func, *args)
+  File "/home/local/property_listings_api/main.py", line 335, in search_properties
+    result = db.execute(text(query), params)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2362, in execute
+    return self._execute_internal(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2256, in _execute_internal
+    result = conn.execute(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1821, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1815, in _execute_context
+    context = constructor(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 1396, in _init_compiled
+    self.compiled_parameters = [
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 1397, in <listcomp>
+    compiled.construct_params(
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 1894, in construct_params
+    raise exc.InvalidRequestError(
+sqlalchemy.exc.StatementError: (sqlalchemy.exc.InvalidRequestError) A value is required for bind parameter 'desired_statuses'
+[SQL: SELECT * FROM merged_property WHERE 1=1 AND "StandardStatus" IN %(desired_statuses)s AND "StandardStatus" = %(StandardStatus)s AND CAST("Latitude" AS FLOAT) BETWEEN %(southwest_latitude)s AND %(northeast_latitude)s AND CAST("Longitude" AS FLOAT) BETWEEN %(southwest_longitude)s AND %(northeast_longitude)s ORDER BY "ListingId" LIMIT %(size)s OFFSET %(offset)s]
+[parameters: [{'StandardStatus': 'Active', 'northeast_latitude': 28.566830896604944, 'southwest_latitude': 28.520719324434314, 'northeast_longitude': -81.3574105873704, 'southwest_longitude': -81.38629160821438, 'size': 20, 'offset': 40}]]
+(Background on this error at: https://sqlalche.me/e/20/cd3x)
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2722261]
+INFO:     Started server process [2727418]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2727418]
+INFO:     Started server process [2727563]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2727563]
+INFO:     Started server process [2728243]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2728243]
+INFO:     Started server process [2728781]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2728781]
+INFO:     Started server process [2728850]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2728850]
+INFO:     Started server process [2728926]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2728926]
+INFO:     Started server process [2729567]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2729567]
+INFO:     Started server process [2729930]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2729930]
+INFO:     Started server process [2730010]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2730010]
+INFO:     Started server process [2730961]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2730961]
+INFO:     Started server process [2732830]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2732830]
+INFO:     Started server process [2734862]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2734862]
+INFO:     Started server process [2735339]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2735339]
+INFO:     Started server process [2735401]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2735401]
+INFO:     Started server process [2735703]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2735703]
+INFO:     Started server process [2735726]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2735726]
+INFO:     Started server process [2735835]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2735835]
+INFO:     Started server process [2736086]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2736086]
+INFO:     Started server process [2736287]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2736287]
+INFO:     Started server process [2736355]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2736355]
+INFO:     Started server process [2736423]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2736423]
+INFO:     Started server process [2736481]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'models.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2736481]
+INFO:     Started server process [2740370]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2740370]
+INFO:     Started server process [2740454]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2740454]
+Process SpawnProcess-30:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/uvicorn/server.py", line 69, in serve
+    await self._serve(sockets)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/uvicorn/server.py", line 76, in _serve
+    config.load()
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/uvicorn/config.py", line 434, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/local/property_listings_api/main.py", line 299
+    query = 'SELECT * FROM merged_property WHERE 1=1  
+            ^
+SyntaxError: unterminated string literal (detected at line 299)
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Started server process [2742665]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2742665]
+Process SpawnProcess-32:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/uvicorn/server.py", line 69, in serve
+    await self._serve(sockets)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/uvicorn/server.py", line 76, in _serve
+    config.load()
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/uvicorn/config.py", line 434, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/home/local/property_listings_api/venv/lib/python3.10/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/local/property_listings_api/main.py", line 504
+    Jot something down
+        ^^^^^^^^^
+SyntaxError: invalid syntax
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Started server process [2746979]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2746979]
+INFO:     Started server process [2748638]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2748638]
+INFO:     Started server process [2749472]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2749472]
+INFO:     Stopping reloader process [2719327]
+INFO:     Will watch for changes in these directories: ['/home/local/property_listings_api']
+INFO:     Uvicorn running on http://192.168.36.100:9999 (Press CTRL+C to quit)
+INFO:     Started reloader process [2750236] using WatchFiles
+INFO:     Started server process [2750239]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.36.1:56760 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+SELECT * FROM merged_property WHERE 1=1 AND "StandardStatus" = :StandardStatus AND CAST("Latitude" AS FLOAT) BETWEEN :southwest_latitude AND :northeast_latitude AND CAST("Longitude" AS FLOAT) BETWEEN :southwest_longitude AND :northeast_longitude ORDER BY "ListingId" LIMIT :size OFFSET :offset
+INFO:     192.168.36.1:33842 - "POST /search?page=2&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:35646 - "POST /search?page=2&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:35648 - "POST /search?page=2&size=20 HTTP/1.1" 200 OK
+SELECT * FROM merged_property WHERE 1=1 AND "StandardStatus" = :StandardStatus AND CAST("Latitude" AS FLOAT) BETWEEN :southwest_latitude AND :northeast_latitude AND CAST("Longitude" AS FLOAT) BETWEEN :southwest_longitude AND :northeast_longitude ORDER BY "ListingId" LIMIT :size OFFSET :offset
+INFO:     192.168.36.1:35654 - "POST /search?page=11&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:33840 - "POST /search?page=11&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:33846 - "POST /search?page=11&size=20 HTTP/1.1" 200 OK
+SELECT * FROM merged_property WHERE 1=1 AND "ListingId" = :ListingId ORDER BY "ListingId" LIMIT :size OFFSET :offset
+INFO:     192.168.36.1:48810 - "POST /search?page=11&size=20 HTTP/1.1" 404 Not Found
+SELECT * FROM merged_property WHERE 1=1 AND "ListingId" = :ListingId AND "StandardStatus" = :StandardStatus ORDER BY "ListingId" LIMIT :size OFFSET :offset
+INFO:     192.168.36.1:36680 - "POST /search?page=11&size=20 HTTP/1.1" 404 Not Found
+SELECT * FROM merged_property WHERE 1=1 ORDER BY "ListingId" LIMIT :size OFFSET :offset
+SELECT * FROM merged_property WHERE 1=1 AND "StandardStatus" = :StandardStatus ORDER BY "ListingId" LIMIT :size OFFSET :offset
+INFO:     192.168.36.1:47316 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:50176 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for connections to close. (CTRL+C to force quit)
+INFO:     192.168.36.1:43496 - "POST /search?page=11&size=20 HTTP/1.1" 200 OK
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2750239]
+INFO:     Started server process [2752342]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Will watch for changes in these directories: ['/home/local/property_listings_api']
+ERROR:    [Errno 98] Address already in use
+WARNING:  WatchFiles detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for connections to close. (CTRL+C to force quit)
+INFO:     192.168.36.1:34048 - "POST /search?page=11&size=20 HTTP/1.1" 200 OK
+INFO:     192.168.36.1:45034 - "POST /search?page=1&size=20 HTTP/1.1" 200 OK
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2752342]
+INFO:     Started server process [2754081]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+SELECT * FROM merged_property WHERE 1=1 AND "StandardStatus" = :StandardStatus ORDER BY "ListingId" LIMIT :size OFFSET :offset
+INFO:     192.168.36.1:40588 - "POST /search?page=11&size=20 HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2754081]
+INFO:     Started server process [2759247]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2759247]
+INFO:     Started server process [2760836]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2760836]
+INFO:     Started server process [2761723]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2761723]
+INFO:     Started server process [2765245]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
