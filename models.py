@@ -74,3 +74,15 @@ class OpenHouse(Base):
     property = relationship("Property", back_populates="open_houses")
 
 
+
+
+# class PropertyCluster(Base):
+#     __tablename__ = "property_clusters"
+
+#     cluster_id = Column(Integer, primary_key=True, index=True)
+#     Latitude = Column(String)      # VARCHAR for Latitude
+#     Longitude = Column(String)     # VARCHAR for Longitude
+#     ListingId = Column(String)     # VARCHAR for ListingId
+#     ListPrice = Column(String)     # VARCHAR for ListPrice
+#     StandardStatus = Column(String)  # VARCHAR for StandardStatus
+#     cluster_value = Column(Integer)  # INT for cluster_value
