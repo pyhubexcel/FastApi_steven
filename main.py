@@ -19,7 +19,12 @@ app.add_middleware(
     allow_headers=["*"],  
 )
 
-BATCH_SIZE = 20  # Fixed batch size
+BATCH_SIZE = 10  # Fixed batch size
+
+
+class Coordinate(BaseModel):
+    latitude: float
+    longitude: float
 
 class PropertySearch(BaseModel):
     ListingId: Optional[str] = None  
@@ -50,14 +55,14 @@ class PropertySearch(BaseModel):
     StreetName: Optional[str] = None  
     StreetNumber: Optional[str] = None  
     StreetSuffix: Optional[str] = None  
-    address: Optional[str] = None  
+    UnparsedAddress: Optional[str] = None  
     LivingArea: Optional[float] = None 
     ParkingFeatures: Optional[str] = None 
     PropertySubType: Optional[str] = None  
     Sewer: Optional[str] = None  
     WaterSource: Optional[str] = None  
     WaterfrontYN: Optional[bool] = None  
-    construction: Optional[str] = None  
+    # constructionmaterials: Optional[str] = None  
     materials: Optional[str] = None  
     Utilities: Optional[str] = None  
     VirtualTourURLUnbranded: Optional[str] = None  
@@ -68,7 +73,15 @@ class PropertySearch(BaseModel):
     size: Optional[str] = None  
     built_in: Optional[int] = None  
     price: Optional[float] = None  
-    description: Optional[str] = None 
+    description: Optional[str] = None  
+    
+    # New fields for bounding box geospatial filter
+    # # Updated fields for bounding box geospatial filter
+    northeast: Optional[Coordinate] = None  
+    northwest: Optional[Coordinate] = None
+    southeast: Optional[Coordinate] = None
+    southwest: Optional[Coordinate] = None
+
      
 
 
@@ -130,7 +143,7 @@ class PropertyResponse(BaseModel):
     Sewer: Optional[str] = None  
     WaterSource: Optional[str] = None  
     WaterfrontYN: Optional[bool] = None  
-    construction: Optional[str] = None  
+    # constructionmaterials: Optional[str] = None  
     materials: Optional[str] = None  
     Utilities: Optional[str] = None  
     VirtualTourURLUnbranded: Optional[str] = None  
@@ -144,6 +157,7 @@ class PropertyResponse(BaseModel):
     description: Optional[str] = None  
     images: Optional[List[MediaResponse]] = None  
     open_house_times: Optional[List[OpenHouseResponse]] = None  
+
 
 
 
@@ -173,52 +187,99 @@ def parse_media(media_data: str) -> List[Dict[str, Any]]:
 
 
 
+
+
+import redis
+import json
+from fastapi import HTTPException
+from sqlalchemy import text
+
+# Initialize Redis
+r = redis.Redis(host='localhost', port=6379, db=0)
+
+
 @app.post("/search", response_model=PaginatedResponse)
 def search_properties(
     search: PropertySearch, 
     db: Session = Depends(get_db),
     page: int = Query(1, ge=1)
 ):
-    query = 'SELECT * FROM merged_property WHERE 1=1  '
+    # print("Received Payload:", search.dict())
+    # Generate a unique key for the query based on search parameters and pagination
+    query_key = f"search:{json.dumps(search.dict(exclude_unset=True))}:{page}"
+
+    # Check if cached result exists
+    cached_result = r.get(query_key)
+    if cached_result:
+        return json.loads(cached_result)
+
+    # Base query
+    query = 'SELECT * FROM merged_property WHERE 1=1'
     params = {}
 
+    # Apply other filters from the search payload (excluding geospatial fields)
     for field, value in search.dict(exclude_unset=True).items():
-        if value is not None:
+        if value is not None and field not in ['northeast', 'northwest', 'southeast', 'southwest']:
             query += f' AND "{field}" = :{field}'
             params[field] = value
+    
+    # Geospatial filter (bounding box for latitude and longitude)
+    if search.northeast and search.southwest:
+        # Extract latitude and longitude from coordinates
+        northeast_latitude = search.northeast.latitude
+        northeast_longitude = search.northeast.longitude
+        southwest_latitude = search.southwest.latitude
+        southwest_longitude = search.southwest.longitude
+        
+        query += ' AND CAST("Latitude" AS FLOAT) BETWEEN :southwest_latitude AND :northeast_latitude'
+        query += ' AND CAST("Longitude" AS FLOAT) BETWEEN :southwest_longitude AND :northeast_longitude'
+        
+        # Update parameters for latitudes and longitudes
+        params['northeast_latitude'] = northeast_latitude
+        params['southwest_latitude'] = southwest_latitude
+        params['northeast_longitude'] = northeast_longitude
+        params['southwest_longitude'] = southwest_longitude
 
-    # Add pagination
+
+    # Sort by ListingId
+    query += ' ORDER BY "ListingId"'
+
+    # Pagination
     offset = (page - 1) * BATCH_SIZE
-    query += f' LIMIT :size OFFSET :offset'
+    query += ' LIMIT :size OFFSET :offset'
     params['size'] = BATCH_SIZE
     params['offset'] = offset
-
+    # print(query)
     # Execute the main query
     result = db.execute(text(query), params)
     properties = result.fetchall()
 
-    # Get total count
-    count_query = f'SELECT COUNT(*) FROM merged_property WHERE 1=1'
+    # Get total count for pagination
+    count_query = 'SELECT COUNT(*) FROM merged_property WHERE 1=1'
     for field, value in search.dict(exclude_unset=True).items():
-        if value is not None:
+        if value is not None and field not in ['northeast', 'northwest', 'southeast', 'southwest']:
             count_query += f' AND "{field}" = :{field}'
+    
+    # Geospatial filter for count query
+    if search.northeast and search.southwest:
+        count_query += ' AND CAST("Latitude" AS FLOAT) BETWEEN :southwest_latitude AND :northeast_latitude'
+        count_query += ' AND  CAST("Longitude" AS FLOAT) BETWEEN :southwest_longitude AND :northeast_longitude'
+
     total_count = db.execute(text(count_query), params).scalar()
 
+    # Raise 404 if no properties found
     if not properties:
         raise HTTPException(status_code=404, detail="No properties found")
 
     results = []
-
     for prop in properties:
-      
         prop_dict = {column: value for column, value in prop._mapping.items()}
-        
+
         # Parse Media (images) and map fields
         if prop_dict.get('Media'):
             prop_dict['images'] = [MediaResponse(**item) for item in parse_media(prop_dict['Media'])]
         else:
             prop_dict['images'] = []
-
 
         # Update field mappings
         prop_dict['full_bathrooms'] = prop_dict.pop('BathroomsFull', None)
@@ -227,9 +288,11 @@ def search_properties(
         prop_dict['baths'] = prop_dict.pop('BathroomsTotalInteger', None)
         prop_dict['latitude'] = prop_dict.pop('Latitude')
         prop_dict['longitude'] = prop_dict.pop('Longitude')
-        prop_dict['construction'] = prop_dict.pop('ConstructionMaterials', None)
+        prop_dict['materials'] = prop_dict.pop('ConstructionMaterials', None)
         prop_dict['type'] = prop_dict.pop('PropertyType', None)
         prop_dict['address'] = prop_dict.pop('UnparsedAddress', None)
+        prop_dict['price'] = prop_dict.pop('ListPrice', None)
+
 
         # Add new fields that may be missing 
         prop_dict['appliances'] = None  # Default to None if missing
@@ -237,37 +300,43 @@ def search_properties(
         prop_dict['attached_garage'] = None
         prop_dict['size'] = None
         prop_dict['built_in'] = None
-        prop_dict['price'] = None
+        # prop_dict['price'] = None
         prop_dict['description'] = None
 
-        
-         # Fetch open houses and add to property
+        # Fetch open houses and add to property
         open_houses = db.query(OpenHouse).filter(OpenHouse.ListingKey == prop_dict.get('ListingKey')).all()
         prop_dict['open_house_times'] = [OpenHouseResponse(**oh.__dict__) for oh in open_houses]
 
-        results.append( PropertyResponse(**prop_dict))
+        # Add property to results
+        results.append(PropertyResponse(**prop_dict))
 
-    return PaginatedResponse(
+    response = PaginatedResponse(
         items=results,
         total=total_count,
         page=page,
         size=BATCH_SIZE
     )
 
+    # # Cache the result in Redis for future queries (set to expire after 10 minutes)
+    r.set(query_key, json.dumps(response.dict()), ex=600)
+
+    return response
 
 
 
+# # ###cluster property data ############
 
+import redis
+import json
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
 from database import get_db
 from typing import List, Dict
 from pydantic import BaseModel
-from sqlalchemy import text
-from sqlalchemy import cast, Float
-from sqlalchemy import select
+from sqlalchemy import text, cast, Float
 
-
+# Initialize Redis
+r = redis.Redis(host='localhost', port=6379, db=0)
 
 class Coordinate(BaseModel):
     latitude: float
@@ -285,25 +354,30 @@ class PropertyDetails(BaseModel):
     ListingId: str 
     property_id: str 
 
-class Cluster(BaseModel):
-    count: int
-
 class ClusteringResponse(BaseModel):
     clusters: List[Dict]  
-
 
 @app.post("/cluster_properties_data", response_model=ClusteringResponse)
 def cluster_properties(
     map_focus: MapFocus,
     db: Session = Depends(get_db),
 ):
+    # Generate a unique cache key based on map focus coordinates
+    query_key = f"cluster:{map_focus.northeast.latitude},{map_focus.northeast.longitude}:" \
+                f"{map_focus.southwest.latitude},{map_focus.southwest.longitude}"
+
+    # # Check if cached result exists in Redis
+    cached_result = r.get(query_key)
+    if cached_result:
+        return ClusteringResponse(**json.loads(cached_result))
+
     # Extract map focus coordinates
     north_east_latitude = map_focus.northeast.latitude
     north_east_longitude = map_focus.northeast.longitude
     south_west_latitude = map_focus.southwest.latitude
     south_west_longitude = map_focus.southwest.longitude
 
-   # Modify query to cast Latitude and Longitude as Float
+    # Query to cast Latitude and Longitude as Float
     properties = db.query(
         cast(Property.Latitude, Float),
         cast(Property.Longitude, Float),
@@ -312,30 +386,16 @@ def cluster_properties(
     ).filter(
         cast(Property.Latitude, Float).between(south_west_latitude, north_east_latitude),
         cast(Property.Longitude, Float).between(south_west_longitude, north_east_longitude),
-        Property.StandardStatus.in_(["Active", "Pending", "Coming Soon"])  
+        Property.StandardStatus.in_(["Active", "Pending", "Coming Soon"])
     ).all()
-   
 
     if not properties:
         raise HTTPException(status_code=404, detail="No properties found in this area")
 
-    # Process and return response as needed
-    cluster_map = {}
+    # Process the query result
     response_clusters = []
 
-
-    for prop in properties:
-        lat = round(float(prop[0]), 1)
-        lng = round(float(prop[1]), 1)
-        key = (lat, lng)
-
-
-    for key, value in cluster_map.items():
-        response_clusters.append({
-            "location": value["location"],
-            "count": value["count"]
-        })
-
+    # Here, we only add property details (without 'location' and 'count')
     for prop in properties:
         response_clusters.append({
             "latitude": float(prop[0]),
@@ -344,13 +404,30 @@ def cluster_properties(
             "price": str(prop[3])
         })
 
-    return ClusteringResponse(clusters=response_clusters, total_count=len(properties))
+    # Prepare the final response
+    response = ClusteringResponse(clusters=response_clusters)
 
+    # Cache the result in Redis with an expiration time of 10 minutes (600 seconds)
+    r.set(query_key, json.dumps(response.dict()), ex=60000)
 
+    return response
 
 
 
 #####midpointAPI########
+
+
+import redis
+import json
+from fastapi import FastAPI, Depends, HTTPException
+from sqlalchemy.orm import Session
+from database import get_db
+from typing import List, Dict
+from pydantic import BaseModel
+from sqlalchemy import text
+
+# Initialize Redis
+r = redis.Redis(host='localhost', port=6379, db=0)
 
 class Coordinate(BaseModel):
     latitude: float
@@ -375,6 +452,15 @@ def cluster_properties_mid(
     map_focus: MapFocus,
     db: Session = Depends(get_db),
 ):
+    # Generate a unique cache key based on map focus coordinates
+    query_key = f"midpoints:{map_focus.northeast.latitude},{map_focus.northeast.longitude}:" \
+                f"{map_focus.southwest.latitude},{map_focus.southwest.longitude}"
+
+    # Check if cached result exists in Redis
+    cached_result = r.get(query_key)
+    if cached_result:
+        return MidpointsResponse(**json.loads(cached_result))
+
     north_east_latitude = map_focus.northeast.latitude
     north_east_longitude = map_focus.northeast.longitude
     south_west_latitude = map_focus.southwest.latitude
@@ -462,7 +548,117 @@ def cluster_properties_mid(
                 count=cluster_data["count"]
             ))
 
-    return MidpointsResponse(midpoints=midpoints)
+    response = MidpointsResponse(midpoints=midpoints)
+
+    # Cache the result in Redis with an expiration time of 10 minutes (600 seconds)
+    r.set(query_key, json.dumps(response.dict()), ex=600)
+
+    return response
+
+
+
+
+
+#cluster table logic##########
+
+
+
+
+from sqlalchemy import Column, Integer, Float, String, Numeric
+from sqlalchemy.ext.declarative import declarative_base
+
+Base = declarative_base()
+
+class PropertyCluster(Base):
+    __tablename__ = 'property_clusters'
+    
+    id = Column(Integer, primary_key=True, index=True)
+    Latitude = Column(Float)
+    Longitude = Column(Float)
+    ListingId = Column(String)
+    ListPrice = Column(Numeric)
+    StandardStatus = Column(String)
+    cluster_value = Column(Integer)
+
+from database import engine
+from models import Base
+
+Base.metadata.create_all(bind=engine) 
+
+@app.post("/create-cluster-table/")
+def create_cluster_table(db: Session = Depends(get_db)):
+    # Create the table if it does not exist
+    PropertyCluster.__table__.create(bind=engine, checkfirst=True)
+    return {"message": "property_clusters table created successfully"}
+
+
+@app.post("/run-clustering/")
+def run_clustering(db: Session = Depends(get_db)):
+    try:
+        # Query to display the schema of property_clusters
+        schema_clusters_query = text("""
+        SELECT column_name, data_type 
+        FROM information_schema.columns 
+        WHERE table_name = 'property_clusters'
+        """)
+        
+        schema_clusters_result = db.execute(schema_clusters_query).fetchall()
+        schema_clusters_info = [{"column_name": row[0], "data_type": row[1]} for row in schema_clusters_result]
+
+        # Query to display the schema of merged_property
+        schema_merged_query = text("""
+        SELECT column_name, data_type 
+        FROM information_schema.columns 
+        WHERE table_name = 'merged_property'
+        """)
+        
+        schema_merged_result = db.execute(schema_merged_query).fetchall()
+        schema_merged_info = [{"column_name": row[0], "data_type": row[1]} for row in schema_merged_result]
+        
+        print("property_clusters schema:", schema_clusters_info)
+        print("merged_property schema:", schema_merged_info)
+
+        # Clustering SQL with corrected column names
+        clustering_sql = text("""
+        INSERT INTO property_clusters (latitude, longitude, listingid, listprice, standardstatus, cluster_value)
+        SELECT latitude, longitude, listingid, listprice, standardstatus, FLOOR(RANDOM() * 10 + 1)
+        FROM merged_property
+        WHERE standardstatus IN ('Active', 'Pending', 'Coming Soon')
+        """)
+        db.execute(clustering_sql)
+        db.commit()
+
+        return {
+            "message": "Clustering data inserted successfully into property_clusters",
+            "schema_info_clusters": schema_clusters_info,
+            "schema_info_merged": schema_merged_info
+        }
+
+    except Exception as e:
+        db.rollback()
+        raise HTTPException(status_code=500, detail=f"An error occurred: {str(e)}")
+
+
+
+
+
+
+# Pydantic model for API response
+class PropertyClusterResponse(BaseModel):
+    id: int
+    Latitude: Optional[float]
+    Longitude: Optional[float]
+    ListingId: Optional[str]
+    ListPrice: Optional[float]
+    StandardStatus: Optional[str]
+    cluster_value: Optional[int]
+# API to fetch all clustered data
+@app.get("/clusters/", response_model=List[PropertyClusterResponse])
+def get_clusters(db: Session = Depends(get_db)):
+    clusters = db.query(PropertyCluster).all()
+    if not clusters:
+        raise HTTPException(status_code=404, detail="No clusters found")
+    return clusters
 
 if __name__ == "__main__":
     uvicorn.run(app, host="192.168.36.100", port=9999)

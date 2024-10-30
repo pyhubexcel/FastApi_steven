@@ -52,10 +52,9 @@ class Property(Base):
     ListPrice = Column(String)
 
     __table_args__ = (
-        Index('idx_listing_id', 'ListingId'), 
-        Index('idx_ListPrice', 'ListPrice'),  
+        Index('idx_lat_long_listingid', 'Latitude', 'Longitude', 'ListingId'),
+        Index('idx_listprice', 'ListPrice'),  # ListPrice par index
         Index('idx_StandardStatus', 'StandardStatus'), 
-        Index('idx_latitude_longitude', 'Latitude', 'Longitude'),     
     )
 
     open_houses = relationship("OpenHouse", back_populates="property")
